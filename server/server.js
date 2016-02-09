@@ -7,15 +7,20 @@ var path = require("path");
 
 //app.set('port', (process.env.PORT || 1337));
 
-app.use(express.static(__dirname + '/../char_sheet'));
+app.use(express.static(__dirname + '/../node_modules'));
+app.use(express.static(__dirname + '/../Public'));
+
+
 
 // app.set('views', __dirname)
 // app.set('view engine', 'html');
 
+
+
 app.get('/', function(request,response) {
-  response.sendFile(path.join(__dirname + '/../char_sheet.html'));
+  response.sendFile(path.join(__dirname + '/../Public/char_sheet.html'));
 });
 
 app.listen(1337, function() {
-  console.log('Node add is running on port ');
+  console.log('Huzzah! Connected!');
 });
