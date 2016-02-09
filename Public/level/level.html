@@ -1,5 +1,6 @@
-<div ui-sref="state1">
-  {{$scope.currentLevel}}
-  <button ng-controller="levelCounterUp">Level Up</button>
-  <button ng-controller="levelCounterDown">Level Down</button>
+<div ng-controller="levelCounter" ui-sref="home.level">
+  <button $scope.counterUp>Level Up</button><br>
+  <button $scope.counterDown>Level Down</button><br>
+  Current Level: {{$scope.currentLevel}}<br>
+  Proficiency Bonus: {{$scope.proficiencyBonus}}<br>
 </div>

@@ -6,9 +6,9 @@ angular.module('char_sheet', ['char_sheet.races', 'char_sheet.level', 'ui.router
       url: '/home',
       tempateUrl: '../index.html'
     })
-    .state('home.level', {
-      url: "/home",
-      templateUrl: "../level/level.html"
+    .state('level', {
+      url: "/level",
+      templateUrl: "../level/level.html",
       controller: 'levelCounter'
     });
 })
