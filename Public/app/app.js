@@ -1,20 +1,37 @@
-angular.module('char_sheet', ['char_sheet.level', 'ui.router'])
+angular.module('char_sheet', ['char_sheet.level', 'char_sheet.races', 'ui.router', 'ngDropdowns'])
 
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
-    // .state('home', {
-    //   url: '/',
-    //   tempateUrl: '../index.html'
-    // })
-
-    .state('level', {
-      url: '/',
-      templateUrl: "./level/level.html",
-      controller: 'levelCounter'
+    .state('character', {
+      views: {
+        'level': {
+          templateUrl: "./level/level.html",
+          controller: 'levelCounter'
+        },
+        'races': {
+          templateUrl: "./races/races.html",
+          controller: 'raceSelect'
+        }
+      }
     });
+
+
+
+
+    //   'level', {
+    //   url: '/',
+    //   templateUrl: "./level/level.html",
+    //   controller: 'levelCounter'
+    // })
+    // .state('races', {
+    //   url: '/',
+    //   templateUrl: "./races/races.html",
+    //   controller: 'raceSelect'
+    // });
+    
 
 
 }]);

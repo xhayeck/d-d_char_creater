@@ -1,12 +1,8 @@
 angular.module('char_sheet.races', [])
 
-.controller('raceSelect', function($scope, races) {
+.controller('raceSelect', function($scope, $state) {
   
- 
-});
-
-
-var races = {
+  $scope.races = {
   gnome: {
     forest: {
       type: "forest",
@@ -28,6 +24,24 @@ var races = {
       intelligence: 1,
       wisdom: 1,
       charisma: 1
+      }
     }
-  }
-}
+  };
+
+  $scope.ddSelectOptions = [
+    {
+      text: 'Option 1',
+      value: 'a value'
+    }, 
+    {
+      text: 'Option 2',
+      value: 'another value',
+      someprop: 'somevalue'
+    }
+  ];
+
+  $scope.ddSelectSelected = {};
+
+});
+
+
