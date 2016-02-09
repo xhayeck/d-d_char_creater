@@ -1,8 +1,9 @@
 angular.module('char_sheet.level', [])
 
-.controller('levelCounter', function($scope) {
+.controller('levelCounter', function($scope, $state) {
 
   $scope.currentLevel = 1;
+  $scope.proficiencyBonus = 2;
 
   $scope.counterUp = function() {
     $scope.currentLevel = $scope.currentLevel + 1;
@@ -24,7 +25,8 @@ angular.module('char_sheet.level', [])
     } else if($scope.currentLevel <= 20) {
       $scope.proficiencyBonus = 6;
     }
-  };
+  }
+  
 
 });
 
