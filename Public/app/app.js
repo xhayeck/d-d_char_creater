@@ -2,11 +2,13 @@ angular.module('char_sheet', ['char_sheet.level', 'char_sheet.races', 'ui.router
 
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/home');
 
   $stateProvider
-    .state('character', {
+    .state('/home', {
+      url: '/home',
       views: {
+        '': '../index.html',
         'level': {
           templateUrl: "./level/level.html",
           controller: 'levelCounter'
