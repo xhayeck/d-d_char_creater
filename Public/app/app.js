@@ -1,13 +1,15 @@
-angular.module('char_sheet', ['char_sheet_races', 'ui.router'])
+angular.module('char_sheet', ['char_sheet.races', 'char_sheet.level', 'ui.router'])
 
-// .config(function($routeProvider) {
-//   $routeProvider
-//   .when('/', {
-//     templateURL: '../Public/char_sheet.html',
-//     controller: 'mainController'
-//   });
-// })
-.controller('mainController', function($scope) {
-  $scope.raceSelect();
+.config(function($stateProvider, $urlRouterProvider) {
+  $stateProvider
+    .state('home', {
+      url: '/home',
+      tempateUrl: '../index.html'
+    })
+    .state('home.level', {
+      url: "/home",
+      templateUrl: "../level/level.html"
+      controller: 'levelCounter'
+    });
 })
-.run
+

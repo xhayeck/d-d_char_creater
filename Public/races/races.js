@@ -1,8 +1,8 @@
-angular.module('char_sheet_races', [])
+angular.module('char_sheet.races', [])
 
 .controller('raceSelect', function($scope, races) {
   
-  console.log('races: ', races);
+ 
 });
 
 
