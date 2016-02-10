@@ -1,6 +1,6 @@
-<div ng-controller="levelCounter">
-  <button ng-click='counterUp(); proficiency()'>Level Up</button><br>
-  <button ng-click='counterDown(); proficiency()'>Level Down</button><br>
-  <pre ng-model='currentLevel'>Current Level: {{currentLevel}}</pre><br>
-  <pre ng-model='proficiencyBonus'>Proficiency Bonus: {{proficiencyBonus}}</pre><br>
+<div class='level' ng-controller="levelCounter">
+  <pre class='current' ng-model='currentLevel'>Current Level: {{currentLevel}}</pre><br>
+  <pre class='current' ng-model='proficiencyBonus'>Proficiency Bonus: {{proficiencyBonus}}</pre><br>
+  <button class='counterButton' ng-click='counterUp(); proficiency()'>Level Up</button><br>
+  <button class='counterButton' ng-click='counterDown(); proficiency()'>Level Down</button><br>
 </div>

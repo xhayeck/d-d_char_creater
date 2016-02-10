@@ -10,7 +10,7 @@ angular.module('char_sheet.races', [])
       dexterity: 1
     },
     rock: {
-      type: "rock",
+      type: "rock, gnome",
       intelligence: 2,
       constitution: 1
     }
@@ -37,15 +37,10 @@ angular.module('char_sheet.races', [])
       text: 'Option 2',
       value: 'another value',
       someprop: 'somevalue'
-    },
-    {
-      divider: true
-    },
-    {
-      divider: true,
-      text: 'divider label'
     }
   ];
+
+  
 
   $scope.ddSelectSelected = {};
 

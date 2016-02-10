@@ -19,22 +19,5 @@ angular.module('char_sheet', ['char_sheet.level', 'char_sheet.races', 'ui.router
         }
       }
     });
-
-
-
-
-    //   'level', {
-    //   url: '/',
-    //   templateUrl: "./level/level.html",
-    //   controller: 'levelCounter'
-    // })
-    // .state('races', {
-    //   url: '/',
-    //   templateUrl: "./races/races.html",
-    //   controller: 'raceSelect'
-    // });
-    
-
-
 }]);
 
