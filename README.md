@@ -1,4 +1,4 @@
-# d-d_char_creater
+# d-d_char_creator
 
 Creating a d&d character sheet creater that will update character stats with minimal user input
 
